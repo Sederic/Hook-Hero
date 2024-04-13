@@ -2,19 +2,22 @@ extends CharacterBody2D
 
 class_name Player
 
-#Preloads
+#References
 @onready var player_animation = $AnimatedSprite2D
+@onready var player = $Player
 
-#Export Variables
+#Variables
 @export var speed = 300.0
 @export var jump_force = -350.0
-
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = 700
+@export var gravity = 700
 
 
 func _physics_process(delta):
-	# Gravity.
+	movement(delta)
+
+#Handles player movement, gravity & jumping
+func movement(delta):
+		# Gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		if velocity.y > 500:
@@ -26,16 +29,17 @@ func _physics_process(delta):
 
 	#Movement
 	var direction = Input.get_axis("Left", "Right")
-		# If moving:
+	# If moving:
 	if direction:
 		#Flip sprite if player is moving other direction
 		player_animation.flip_h = (direction == -1)
-		#Give player velocity towards direction
-	velocity.x = direction * speed
 	
+	#Give player velocity towards direction
+	velocity.x = direction * speed
 	move_and_slide()
 	update_animation(direction)
 
+#Updates animations
 func update_animation(direction):
 	if is_on_floor():
 		if direction:
@@ -47,3 +51,4 @@ func update_animation(direction):
 			player_animation.play("Fall")
 		elif velocity.y < 0:
 			player_animation.play("Jump")
+
