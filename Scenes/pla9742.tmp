@@ -207,9 +207,13 @@ animations = [{
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_6nljk")
+speed = null
+jump_force = null
+air_drag = null
+gravity = null
+swing_speed = null
 
 [node name="Raycast" type="Node2D" parent="."]
-rotation = -1.5708
 
 [node name="Raycast01" type="RayCast2D" parent="Raycast"]
 position = Vector2(0, 2)
@@ -320,5 +324,4 @@ speed_scale = 2.0
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -75)
 zoom = Vector2(2, 2)
