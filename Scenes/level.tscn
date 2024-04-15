@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://delmw0mmn0nc6"]
+[gd_scene load_steps=5 format=3 uid="uid://delmw0mmn0nc6"]
 
 [ext_resource type="PackedScene" uid="uid://dk1yyhg82d3xp" path="res://Scenes/tile_map.tscn" id="1_5ml2h"]
 [ext_resource type="PackedScene" uid="uid://cx6ynvugm2vrq" path="res://Scenes/player.tscn" id="2_tiybw"]
+[ext_resource type="PackedScene" uid="uid://bv03nuw2xypc6" path="res://Scenes/enemy.tscn" id="3_ry0cf"]
 [ext_resource type="PackedScene" uid="uid://cppltcexawusx" path="res://Scenes/ui.tscn" id="3_tqyym"]
 
 [node name="Level" type="Node2D"]
@@ -22,7 +23,10 @@ layer_0/tile_data = PackedInt32Array(262152, 0, 1, 327688, 0, 2, 393224, 0, 3, 1
 [node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_tiybw")]
 position = Vector2(100, 300)
 
+[node name="Sprite2D" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_ry0cf")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer"]
 follow_viewport_enabled = true
 
 [node name="UI" parent="SubViewportContainer/CanvasLayer" instance=ExtResource("3_tqyym")]
+visible = false
