@@ -4,7 +4,7 @@ class_name Player
 
 #References
 @onready var player_animation = $AnimatedSprite2D
-@onready var player = $Player
+@onready var player = $"."
 
 #Variables
 @export var speed = 300.0
