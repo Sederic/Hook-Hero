@@ -1,7 +1,9 @@
-[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://bgwvo5fws5yay"]
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://bgwvo5fws5yay"]
 
 [ext_resource type="Texture2D" uid="uid://du1flngx3gk7w" path="res://Assets/Textures/Player Animations/Idle_Jorge.png" id="1_osuvd"]
+[ext_resource type="Texture2D" uid="uid://bfh0h7d8a64tm" path="res://Assets/Textures/Player Animations/Fall_Jorge.png" id="1_ow2w1"]
 [ext_resource type="Texture2D" uid="uid://b6dvo7lo5rauh" path="res://Assets/Textures/Player Animations/Run_Jorge.png" id="2_kawik"]
+[ext_resource type="Texture2D" uid="uid://bxcsxsxus5l11" path="res://Assets/Textures/Player Animations/Jump_Jorge.png" id="3_mnfy3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3x41l"]
 atlas = ExtResource("1_osuvd")
@@ -71,6 +73,14 @@ region = Rect2(224, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_ow2w1")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_3x41l")
 }, {
 "duration": 1.0,
@@ -96,6 +106,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mnfy3")
+}],
+"loop": true,
+"name": &"Jump",
 "speed": 5.0
 }, {
 "frames": [{
