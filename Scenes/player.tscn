@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx6ynvugm2vrq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6nljk"]
-[ext_resource type="SpriteFrames" uid="uid://bgwvo5fws5yay" path="res://Assets/Textures/Player Animations/run_jorge.tres" id="2_cs7eb"]
+[ext_resource type="SpriteFrames" uid="uid://bgwvo5fws5yay" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syfoe"]
 size = Vector2(15, 24)
@@ -25,8 +25,8 @@ shape = SubResource("RectangleShape2D_syfoe")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1, 0)
-sprite_frames = ExtResource("2_cs7eb")
-animation = &"Run"
+sprite_frames = ExtResource("2_ieyuq")
+animation = &"Idle"
 speed_scale = 2.0
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
