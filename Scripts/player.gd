@@ -56,4 +56,5 @@ func update_animation(direction):
 
 func reset_pos():
 	position = starting_pos
+	velocity = Vector2(0, 0)
 
