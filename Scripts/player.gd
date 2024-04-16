@@ -11,6 +11,7 @@ class_name Player
 @export var jump_force = -350.0
 @export var gravity = 700
 
+var starting_pos = Vector2(100, 300)
 
 func _physics_process(delta):
 	movement(delta)
@@ -51,4 +52,7 @@ func update_animation(direction):
 			player_animation.play("Fall")
 		elif velocity.y < 0:
 			player_animation.play("Jump")
+
+func reset_pos():
+	position = starting_pos
 

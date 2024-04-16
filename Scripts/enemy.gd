@@ -7,7 +7,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(game_manager.player.get_children()[0].name)
-	if $Area2D.overlaps_body(game_manager.player.get_children()[0]):
-		print("aaa")
+	if $Area2D.overlaps_area(game_manager.player.get_children()[0]):
 		game_manager.player_death()
