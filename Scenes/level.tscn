@@ -37,4 +37,3 @@ layer_0/tile_data = PackedInt32Array(786434, 0, 0, 786435, 65536, 0, 786436, 655
 follow_viewport_enabled = true
 
 [node name="UI" parent="SubViewportContainer/CanvasLayer" instance=ExtResource("3_tqyym")]
-visible = false
