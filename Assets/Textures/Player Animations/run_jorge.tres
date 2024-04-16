@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bgwvo5fws5yay"]
+
+[ext_resource type="Texture2D" uid="uid://b6dvo7lo5rauh" path="res://Assets/Textures/Player Animations/Run_Jorge.png" id="1_fneta"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqtuw"]
+atlas = ExtResource("1_fneta")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdnp2"]
+atlas = ExtResource("1_fneta")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5yyt"]
+atlas = ExtResource("1_fneta")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmamx"]
+atlas = ExtResource("1_fneta")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imn3v"]
+atlas = ExtResource("1_fneta")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipwei"]
+atlas = ExtResource("1_fneta")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpiuk"]
+atlas = ExtResource("1_fneta")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqyba"]
+atlas = ExtResource("1_fneta")
+region = Rect2(224, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqtuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdnp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5yyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmamx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imn3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipwei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpiuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqyba")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
