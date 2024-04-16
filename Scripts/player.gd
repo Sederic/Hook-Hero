@@ -39,6 +39,8 @@ func movement(delta):
 	velocity.x = direction * speed
 	move_and_slide()
 	update_animation(direction)
+	if position.y > 600:
+		GameManager.player_death()
 
 #Updates animations
 func update_animation(direction):
