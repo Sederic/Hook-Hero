@@ -46,7 +46,8 @@ func update_animation(direction):
 		if direction:
 			player_animation.play("Run")
 		else:
-			player_animation.play("Idle")
+			#player_animation.play("Idle")
+			player_animation.play("test")
 	else:
 		if velocity.y > 0:
 			player_animation.play("Fall")

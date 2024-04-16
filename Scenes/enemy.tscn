@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_psi57"]
 size = Vector2(128, 128)
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="enemy" type="Sprite2D"]
 position = Vector2(350, 300)
 texture = ExtResource("1_47b3f")
 script = ExtResource("2_akc2x")
