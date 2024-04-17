@@ -30,6 +30,9 @@ scale = Vector2(0.5, 0.5)
 [node name="Player" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_tiybw")]
 position = Vector2(100, 300)
 
+[node name="CanvasModulate" type="CanvasModulate" parent="SubViewportContainer/SubViewport"]
+color = Color(0.941176, 0.807843, 0.705882, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer"]
 follow_viewport_enabled = true
 

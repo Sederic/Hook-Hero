@@ -39,4 +39,6 @@ rotation = -1.5708
 target_position = Vector2(0, 500)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(3, 3)
+shadow_enabled = true
 texture = ExtResource("3_3xi7f")
