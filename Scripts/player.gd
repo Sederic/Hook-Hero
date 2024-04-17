@@ -152,22 +152,6 @@ func _draw():
 		draw_set_transform(Vector2.ZERO, rope_angle, Vector2(1, 1))
 		#Draws the rope texture
 		draw_texture_rect(rope_texture, rope_rect, true, Color(1,1,1,1), false)
-		
-
-	var colliding: bool = false
-	var point_of_collision: Vector2
-	
-	#Check if any of the raycasts collided
-	for child in raycast.get_children():
-		if child is RayCast2D:
-			if child.is_colliding():
-				colliding = true
-				point_of_collision = child.get_collision_point()
-			else:
-				colliding = false
-	
-	#if colliding and pos.distance_to(point_of_collision) < rope_length:
-		#draw_line(Vector2(0, 0), to_local(point_of_collision), Color("WHITE", 0.25), 3 , true)
 
 func reset_pos():
 	position = starting_pos
