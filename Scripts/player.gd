@@ -102,9 +102,8 @@ func hook(delta):
 
 #Returns the Vector2 where raycast is colliding
 func get_hook_position():
-	for ray in raycast.get_children():
-		if ray.is_colliding():
-			return ray.get_collision_point()
+	if raycast.get_child(0).is_colliding():
+		return raycast.get_child(0).get_collision_point()
 
 #Handles hook's swing
 func hook_swing(delta):
