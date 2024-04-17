@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx6ynvugm2vrq"]
+[gd_scene load_steps=4 format=3 uid="uid://cx6ynvugm2vrq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6nljk"]
-[ext_resource type="SpriteFrames" uid="uid://bgwvo5fws5yay" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
-[ext_resource type="Texture2D" uid="uid://d283e0b064fgr" path="res://Assets/Textures/Player Animations/player_light.png" id="3_3xi7f"]
+[ext_resource type="SpriteFrames" uid="uid://can3pfue4c7m4" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syfoe"]
 size = Vector2(15, 24)
@@ -37,8 +36,3 @@ z_index = 10
 z_index = 10
 rotation = -1.5708
 target_position = Vector2(0, 500)
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(3, 3)
-shadow_enabled = true
-texture = ExtResource("3_3xi7f")

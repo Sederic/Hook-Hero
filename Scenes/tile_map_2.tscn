@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvoeyjbrwfdfb"]
+[gd_scene load_steps=3 format=3 uid="uid://cq5pg8j6aqsl8"]
 
 [ext_resource type="TileSet" uid="uid://cgh7atfmftecf" path="res://Assets/Textures/Tiles - Jorge/tileset_1.tres" id="1_skvfe"]
 [ext_resource type="Script" path="res://Scripts/tile_map_2.gd" id="2_ncwp5"]
