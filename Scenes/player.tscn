@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx6ynvugm2vrq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6nljk"]
-
 [ext_resource type="SpriteFrames" uid="uid://bgwvo5fws5yay" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
-
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syfoe"]
 size = Vector2(15, 24)
 
-
+[node name="Player" type="CharacterBody2D"]
+z_index = 10
+position = Vector2(7, 5)
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_6nljk")
@@ -33,12 +33,10 @@ speed_scale = 2.0
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -75)
 zoom = Vector2(2, 2)
 
 [node name="Raycast" type="Node2D" parent="."]
 
-[node name="Raycast2D" type="RayCast2D" parent="Raycast"]
-position = Vector2(2, -8.74228e-08)
+[node name="RayCast2D" type="RayCast2D" parent="Raycast"]
 rotation = -1.5708
-target_position = Vector2(0, 500)
+target_position = Vector2(2.08165e-12, 500)
