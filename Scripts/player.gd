@@ -120,7 +120,6 @@ func hook_swing(delta):
 	if motion.length() < 0.01 or radius.length() < 10: 
 		return
 	
-	
 	var angle = acos(radius.dot(motion) / (radius.length() * motion.length()))
 	var radius_velocity = cos(angle) * motion.length()
 	motion += radius.normalized() * -radius_velocity
