@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://brkxcjre8xwuo"]
+
+[ext_resource type="Texture2D" uid="uid://cppd2d6j6qp6p" path="res://Assets/Textures/Sergio's Hook/Sprite-0002.png" id="1_p0g28"]
+
+[node name="Rope" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_p0g28")

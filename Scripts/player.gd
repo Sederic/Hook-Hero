@@ -6,6 +6,8 @@ class_name Player
 @onready var player_animation = $AnimatedSprite2D
 @onready var raycast = $Raycast
 @onready var player = $"."
+@onready var rope_texture = preload("res://Assets/Textures/Sergio's Hook/Sprite-0002.png")
+
 
 #Exports
 @export var speed = 300.0
@@ -24,7 +26,7 @@ var current_rope_length: float
 
 func _ready():
 	current_rope_length = rope_length
-  
+
 func _physics_process(delta):
 	movement(delta)
 	hook(delta)
@@ -77,7 +79,6 @@ func update_animation(direction):
 			player_animation.play("Fall")
 		elif velocity.y < 0:
 			player_animation.play("Jump")
-
 
 #Handles hook shooting and placement
 func hook(delta):
@@ -132,12 +133,26 @@ func hook_swing(delta):
 	#
 	motion += (hook_position - global_position).normalized() * 15000 * delta
 
+#Draw line
 func _draw():
+	#Calculate the direction of the rope
+	var rope_directon : Vector2 =  hook_position - global_position
+	
+	#Calculate length
+	var rope_length : float = rope_directon.length() + 10
+	
+	#Calculate angle
+	var rope_angle = atan2(rope_directon.y, rope_directon.x)
+	
+	#Setup Rope Rect
+	var rope_rect = Rect2(Vector2.ZERO, Vector2(rope_length, rope_texture.get_height()))
+	
 	if hooked:
-		#This should be replaced with a DrawTextureMesh later 
-		draw_line(Vector2(0, 0), to_local(hook_position), Color(.56, .44, .00), 2 , true)
-	else:
-		return 
+		#Sets the transform for the rope (and all other drawn canvas items)
+		draw_set_transform(Vector2.ZERO, rope_angle, Vector2(1, 1))
+		#Draws the rope texture
+		draw_texture_rect(rope_texture, rope_rect, true, Color(1,1,1,1), false)
+		
 
 	var colliding: bool = false
 	var point_of_collision: Vector2

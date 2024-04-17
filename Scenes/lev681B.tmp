@@ -37,12 +37,8 @@ gravity = 700
 swing_speed = 0.975
 starting_pos = Vector2(100, 300)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="SubViewportContainer/SubViewport"]
-color = Color(0.941176, 0.807843, 0.705882, 1)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer"]
 follow_viewport_enabled = true
 
 [node name="UI" parent="SubViewportContainer/CanvasLayer" instance=ExtResource("3_tqyym")]
 visible = false
-texture_filter = 1

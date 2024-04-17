@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dswlqy647dq4o"
-path="res://.godot/imported/rope_sprite.png-a33f425d03aa9dc02f4728bff7df675d.ctex"
+uid="uid://cppd2d6j6qp6p"
+path="res://.godot/imported/Sprite-0002.png-c94fefc15ce7e4aed58a8a48ec02d8d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Sergio's Hook/rope_sprite.png"
-dest_files=["res://.godot/imported/rope_sprite.png-a33f425d03aa9dc02f4728bff7df675d.ctex"]
+source_file="res://Assets/Textures/Sergio's Hook/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-c94fefc15ce7e4aed58a8a48ec02d8d3.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=1
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
