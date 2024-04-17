@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dugkkrss3l54o"]
+[gd_scene load_steps=4 format=3 uid="uid://cppltcexawusx"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_trntm"]
 [ext_resource type="Texture2D" uid="uid://casq463twq7ka" path="res://Assets/Textures/Tiles - Jorge/ui_brick.png" id="2_1l161"]

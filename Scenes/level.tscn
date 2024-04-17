@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dk1yyhg82d3xp" path="res://Scenes/tile_map.tscn" id="1_5ml2h"]
 [ext_resource type="PackedScene" uid="uid://cx6ynvugm2vrq" path="res://Scenes/player.tscn" id="2_tiybw"]
-[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="3_ry0cf"]
-[ext_resource type="PackedScene" uid="uid://dugkkrss3l54o" path="res://Scenes/ui.tscn" id="3_tqyym"]
-[ext_resource type="PackedScene" uid="uid://cq5pg8j6aqsl8" path="res://Scenes/tile_map_2.tscn" id="4_24bbc"]
+[ext_resource type="PackedScene" uid="uid://bv03nuw2xypc6" path="res://Scenes/enemy.tscn" id="3_ry0cf"]
+[ext_resource type="PackedScene" uid="uid://cppltcexawusx" path="res://Scenes/ui.tscn" id="3_tqyym"]
+[ext_resource type="PackedScene" uid="uid://cvoeyjbrwfdfb" path="res://Scenes/tile_map_2.tscn" id="4_24bbc"]
 
 [node name="Level" type="Node2D"]
 
