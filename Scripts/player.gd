@@ -84,8 +84,10 @@ func hook(delta):
 	raycast.look_at(get_global_mouse_position())
 	
 	if Input.is_action_just_pressed("Left Click"):
-		#Find the hook's Vector2
-		hook_position = get_hook_position()
+		
+		#Find the hook's Vector2 if it returns a Vector2
+		if get_hook_position():
+			hook_position = get_hook_position()
 		
 		#if there is a hook position (not null)
 		if hook_position:
@@ -96,6 +98,7 @@ func hook(delta):
 		hooked = false
 		velocity.y *= -.5
 		velocity.x *= 2
+		hook_position = Vector2.ZERO
 
 #Returns the Vector2 where raycast is colliding
 func get_hook_position():
@@ -126,17 +129,13 @@ func hook_swing(delta):
 	motion += (hook_position - global_position).normalized() * 15000 * delta
 
 func _draw():
-	
-	var pos = global_position
-	
 	if hooked:
 		#This should be replaced with a DrawTextureMesh later 
 		draw_line(Vector2(0, 0), to_local(hook_position), Color(.56, .44, .00), 2 , true)
 	else:
 		return 
-	
-	
-	var colliding: bool
+
+	var colliding: bool = false
 	var point_of_collision: Vector2
 	
 	#Check if any of the raycasts collided
