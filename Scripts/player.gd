@@ -120,12 +120,14 @@ func hook_swing(delta):
 	if motion.length() < 0.01 or radius.length() < 10: 
 		return
 	
-<<<<<<< Updated upstream
-=======
-	#Get angle of swing motion
->>>>>>> Stashed changes
+
+	#Get angle of swing motion?
 	var angle = acos(radius.dot(motion) / (radius.length() * motion.length()))
+	
+	#??
 	var radius_velocity = cos(angle) * motion.length() 
+	
+	#??
 	motion += radius.normalized() * -radius_velocity
 	
 	#Keep the player position restricted to the rope's length
