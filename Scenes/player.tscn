@@ -1,33 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx6ynvugm2vrq"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6nljk"]
-
-[ext_resource type="SpriteFrames" uid="uid://bgwvo5fws5yay" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
-
+[ext_resource type="SpriteFrames" uid="uid://can3pfue4c7m4" path="res://Assets/Textures/Player Animations/anims_jorge.tres" id="2_ieyuq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syfoe"]
 size = Vector2(15, 24)
 
-
+[node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_6nljk")
-
-[node name="PlayerArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
-position = Vector2(-0.5, 2)
-shape = SubResource("RectangleShape2D_syfoe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 2)
 shape = SubResource("RectangleShape2D_syfoe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 10
 texture_filter = 1
 position = Vector2(-1, 0)
 sprite_frames = ExtResource("2_ieyuq")
-animation = &"Jump"
+animation = &"Fall"
 speed_scale = 2.0
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
@@ -37,8 +30,9 @@ offset = Vector2(0, -75)
 zoom = Vector2(2, 2)
 
 [node name="Raycast" type="Node2D" parent="."]
+z_index = 10
 
 [node name="Raycast2D" type="RayCast2D" parent="Raycast"]
-position = Vector2(2, -8.74228e-08)
+z_index = 10
 rotation = -1.5708
 target_position = Vector2(0, 500)

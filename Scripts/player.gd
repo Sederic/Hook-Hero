@@ -7,7 +7,6 @@ class_name Player
 @onready var raycast = $Raycast
 @onready var player = $"."
 
-
 #Exports
 @export var speed = 300.0
 @export var jump_force = -350.0
@@ -154,7 +153,6 @@ func _draw():
 	
 	#if colliding and pos.distance_to(point_of_collision) < rope_length:
 		#draw_line(Vector2(0, 0), to_local(point_of_collision), Color("WHITE", 0.25), 3 , true)
-
 
 func reset_pos():
 	position = starting_pos
