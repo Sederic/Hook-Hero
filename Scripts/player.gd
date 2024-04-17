@@ -4,13 +4,14 @@ class_name Player
 
 #References
 @onready var player_animation = $AnimatedSprite2D
-@onready var player = $Player
+@onready var player = $"."
 
 #Variables
 @export var speed = 300.0
 @export var jump_force = -350.0
 @export var gravity = 700
 
+var starting_pos = Vector2(100, 300)
 
 func _physics_process(delta):
 	movement(delta)
@@ -38,6 +39,8 @@ func movement(delta):
 	velocity.x = direction * speed
 	move_and_slide()
 	update_animation(direction)
+	if position.y > 600:
+		GameManager.player_death()
 
 #Updates animations
 func update_animation(direction):
@@ -51,4 +54,8 @@ func update_animation(direction):
 			player_animation.play("Fall")
 		elif velocity.y < 0:
 			player_animation.play("Jump")
+
+func reset_pos():
+	position = starting_pos
+	velocity = Vector2(0, 0)
 
