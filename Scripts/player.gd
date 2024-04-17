@@ -5,6 +5,8 @@ class_name Player
 #References
 @onready var player_animation = $AnimatedSprite2D
 @onready var raycast = $Raycast
+@onready var player = $"."
+
 
 #Exports
 @export var speed = 300.0
@@ -12,6 +14,7 @@ class_name Player
 @export var air_drag = 0.3
 @export var gravity = 700
 @export var swing_speed = 0.975
+@export var starting_pos = Vector2(100, 300)
 
 #Locals
 var motion: Vector2
@@ -22,7 +25,7 @@ var current_rope_length: float
 
 func _ready():
 	current_rope_length = rope_length
-
+  
 func _physics_process(delta):
 	movement(delta)
 	hook(delta)
@@ -60,6 +63,8 @@ func movement(delta):
 	motion.x = velocity.x
 	move_and_slide()
 	update_animation(direction)
+	if position.y > 600:
+		GameManager.player_death()
 
 #Updates animations
 func update_animation(direction):
@@ -73,6 +78,7 @@ func update_animation(direction):
 			player_animation.play("Fall")
 		elif velocity.y < 0:
 			player_animation.play("Jump")
+
 
 #Handles hook shooting and placement
 func hook(delta):
@@ -148,3 +154,9 @@ func _draw():
 	
 	#if colliding and pos.distance_to(point_of_collision) < rope_length:
 		#draw_line(Vector2(0, 0), to_local(point_of_collision), Color("WHITE", 0.25), 3 , true)
+
+
+func reset_pos():
+	position = starting_pos
+	velocity = Vector2(0, 0)
+
