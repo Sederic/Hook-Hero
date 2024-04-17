@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://bgwvo5fws5yay"]
+[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://can3pfue4c7m4"]
 
 [ext_resource type="Texture2D" uid="uid://du1flngx3gk7w" path="res://Assets/Textures/Player Animations/Idle_Jorge.png" id="1_osuvd"]
 [ext_resource type="Texture2D" uid="uid://bfh0h7d8a64tm" path="res://Assets/Textures/Player Animations/Fall_Jorge.png" id="1_ow2w1"]

@@ -113,16 +113,19 @@ func get_hook_position():
 
 #Handles hook's swing
 func hook_swing(delta):
-	
 	#Radius of hook relative to player
 	var radius: Vector2 = global_position - hook_position
 	
-	#
+	#Not sure what this is for - tutorial guy never explained it
 	if motion.length() < 0.01 or radius.length() < 10: 
 		return
 	
+<<<<<<< Updated upstream
+=======
+	#Get angle of swing motion
+>>>>>>> Stashed changes
 	var angle = acos(radius.dot(motion) / (radius.length() * motion.length()))
-	var radius_velocity = cos(angle) * motion.length()
+	var radius_velocity = cos(angle) * motion.length() 
 	motion += radius.normalized() * -radius_velocity
 	
 	#Keep the player position restricted to the rope's length
