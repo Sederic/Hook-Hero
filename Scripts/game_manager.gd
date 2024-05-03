@@ -22,6 +22,7 @@ func player_death():
 
 func debug():
 	ui.hide()
+	get_node("/root/Root/SubViewportContainer/SubViewport/TileMap").queue_free()
 	level.set_process_mode(PROCESS_MODE_INHERIT)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -9,7 +9,7 @@
 [node name="Player" parent="." instance=ExtResource("1_8epam")]
 position = Vector2(100, 300)
 
+[node name="TileMap2" parent="." instance=ExtResource("3_lmqni")]
+
 [node name="enemy" parent="." instance=ExtResource("2_qj4tb")]
 scale = Vector2(0.5, 0.5)
-
-[node name="TileMap2" parent="." instance=ExtResource("3_lmqni")]
