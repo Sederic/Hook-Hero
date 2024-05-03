@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd416pap0eci1"]
+
+[ext_resource type="PackedScene" uid="uid://cx6ynvugm2vrq" path="res://Scenes/player.tscn" id="1_8epam"]
+[ext_resource type="PackedScene" uid="uid://bv03nuw2xypc6" path="res://Scenes/enemy.tscn" id="2_qj4tb"]
+[ext_resource type="PackedScene" uid="uid://cvoeyjbrwfdfb" path="res://Scenes/tile_map_2.tscn" id="3_lmqni"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8epam")]
+position = Vector2(100, 300)
+
+[node name="enemy" parent="." instance=ExtResource("2_qj4tb")]
+scale = Vector2(0.5, 0.5)
+
+[node name="TileMap2" parent="." instance=ExtResource("3_lmqni")]
