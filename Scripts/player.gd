@@ -127,6 +127,7 @@ func hook_swing(delta):
 	#
 	motion += (hook_position - global_position).normalized() * 15000 * delta
 
+#Draws the rope's line
 func _draw():
 	if hooked:
 		#This should be replaced with a DrawTextureMesh later 
